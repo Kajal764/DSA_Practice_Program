@@ -2,7 +2,7 @@ package com.dsa.array;
 
 public class SecondLargestElement {
     public static void main(String[] args) {
-        int[] arr = {16, 16, 16};
+        int[] arr = {37,61,3};
         largestAndSecondLargest(arr.length, arr);
     }
 

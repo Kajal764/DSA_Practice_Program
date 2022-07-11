@@ -1,15 +1,17 @@
 package com.dsa.array;
 
+//Kadane's Algorithm
 public class MaximumSumSubArray {
 
     public static void main(String[] args) {
-        int arr[] = {1, -2, 3, -1, 2};
+         int arr[] = {1, -2, 3, -1, 2};
+       // int arr[] = {-1, -2, -3, -4};
         //    getMaximumSum(arr);
         // getMaximumSumEfficientWay(arr);
         getMaximumSum1(arr);
     }
 
-    // Time complexity = O(n2) - if the sum is giving negative no we will discard it
+    // Time complexity = O(n) - if the sum is giving negative no we will discard it
     // also called Kadane's Algorithm
     private static void getMaximumSum1(int[] arr) {
         int currSum = 0;
@@ -24,20 +26,8 @@ public class MaximumSumSubArray {
         System.out.println(maxSum);
     }
 
+
     // Time Complexity = O(n2)
-//    int arr[] = {1, -2, 3, -1, 2};
-//    maxEnding = 1 , -1 , 3 , 2 , 4
-    private static void getMaximumSumEfficientWay(int[] arr) {
-        int res = arr[0];
-        int maxEnding = arr[0];
-
-        for (int i = 1; i < arr.length; i++) {
-            maxEnding = Math.max(maxEnding + arr[i], arr[i]);
-            res = Math.max(res, maxEnding);
-        }
-        System.out.println(res);
-    }
-
     private static void getMaximumSum(int[] arr) {
         int res = 0;
         for (int i = 0; i < arr.length; i++) {
@@ -50,4 +40,16 @@ public class MaximumSumSubArray {
         System.out.println(res);
     }
 
+    // Time Complexity = O(n2)
+//    int arr[] = {1, -2, 3, -1, 2};
+//    maxEnding = 1 , -1 , 3 , 2 , 4
+//    private static void getMaximumSumEfficientWay(int[] arr) {
+//        int res = arr[0];
+//        int maxEnding = arr[0];
+//        for (int i = 1; i < arr.length; i++) {
+//            maxEnding = Math.max(maxEnding + arr[i], arr[i]);
+//            res = Math.max(res, maxEnding);
+//        }
+//        System.out.println(res);
+    //  }
 }

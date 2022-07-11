@@ -6,6 +6,25 @@ public class TrappingRainWater {
         int arr[] = {3, 0, 1, 2, 5};
 //        getWater(arr);
         getWaterEfficientWay(arr);
+        getMostWaterWithoutUsingExtraArray(arr);
+    }
+
+    private static int getMostWaterWithoutUsingExtraArray(int[] arr) {
+        int leftMax = 0, rightMax = 0, ans = 0;
+        int l = 0, r = arr.length - 1;
+        while (l < r) {
+            if (arr[l] <= arr[r]) {
+                if (arr[l] < leftMax) ans += leftMax - arr[l];
+                else leftMax = arr[l];
+                l++;
+            } else {
+                if (arr[r] < rightMax) ans += rightMax = arr[r];
+                else rightMax = arr[r];
+                r--;
+            }
+        }
+        System.out.println(ans);
+        return ans;
     }
 
     //Time complexity O(n)

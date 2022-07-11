@@ -10,10 +10,9 @@ public class Leaders {
 
     // Time Complexity O(n)
     private static void findLeadersInEfficientWay(int[] arr, int n) {
-        int max = arr[n - 1];
-        System.out.print(max+" ");
-        for (int i = n-2; i >= 0; i--) {
-            if(max < arr[i])
+        int max = 0;
+        for (int i = n-1; i >= 0; i--) {
+            if(arr[i]>=max)
             {
                 max=arr[i];
                 System.out.print(arr[i]+" ");
