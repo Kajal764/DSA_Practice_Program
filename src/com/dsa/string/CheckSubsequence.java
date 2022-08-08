@@ -1,9 +1,9 @@
 package com.dsa.string;
 
-public class CheckSubString {
+public class CheckSubsequence {
     public static void main(String[] args) {
-        String s1 = "abcd";
-        String s2 = "ad";
+        String s1 = "adbceabc";
+        String s2 = "abc";
         System.out.println(check(s1, s2));
         System.out.println(checkRecursiveWay(s1, s2, s1.length(), s2.length()));
     }

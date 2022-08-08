@@ -4,7 +4,7 @@ package com.dsa.array;
 public class MajorityElement {
 
     public static void main(String[] args) {
-        int arr[] = {3, 4, 5, 3, 3, 4, 5, 3, 3};
+        int arr[] = {4, 5, 3, 3, 3, 4, 5, 3, 3};
         //  System.out.println(findMajorityElement(arr));
         System.out.println(findMajorityElementEfficientWay(arr));
     }
@@ -20,11 +20,8 @@ public class MajorityElement {
                 currentElement = arr[i];
                 count = 1;
             }
-            if (currentElement == arr[i]) {
-                count++;
-            } else {
-                count--;
-            }
+            if (currentElement == arr[i]) count++;
+            else count--;
         }
         int majorityCount = 0;
         for (int i = 0; i < arr.length; i++) {

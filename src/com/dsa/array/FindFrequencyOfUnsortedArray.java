@@ -37,7 +37,6 @@ public class FindFrequencyOfUnsortedArray {
     // Time Complexity : O(n^2)
 // Aux Space Complexity : O(1)
     static void countFrequency(int[] array, int size) {
-
         for (int i = 0; i < size; i++) {
             int flag = 0;
             int count = 0;

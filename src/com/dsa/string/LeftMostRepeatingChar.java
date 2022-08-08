@@ -2,7 +2,7 @@ package com.dsa.string;
 
 public class LeftMostRepeatingChar {
     public static void main(String[] args) {
-        String s = "GeeksG";
+        String s = "Geeks";
         System.out.println(findLeftMostChar(s));
         System.out.println(betterApproach(s));
         System.out.println(efficientApproach(s));
@@ -17,7 +17,7 @@ public class LeftMostRepeatingChar {
             if (vistited[s.charAt(i)])
                 res = i;
             else
-                vistited[s.charAt(i)] = false;
+                vistited[s.charAt(i)] = true;
         }
         return res;
     }

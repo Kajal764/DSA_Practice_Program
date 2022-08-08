@@ -53,10 +53,14 @@ public class RabinKarp {
 
         //Compute p and t
         int p = 0, t = 0;
+        // for next time d will add as d2 and d3
         for (int i = 0; i < M; i++) {
             p = (p * d + pat.charAt(i)) % q;
-            t = (t * d + txt.charAt(i)) % q;
+            p += (pat.charAt(i) * Math.pow(d, M - i - 1));
+            t += (txt.charAt(i) * Math.pow(d, M - i - 1));
         }
+        p = p % q;
+        t = t % q;
 
         for (int i = 0; i <= (N - M); i++) {
             //Check for hit
@@ -69,8 +73,8 @@ public class RabinKarp {
                     }
                 if (flag == true) System.out.print(i + " ");
             }
-            //Compute ti+1 using ti
-
+//            //Compute ti+1 using ti
+//
             if (i < N - M) {
                 t = ((d * (t - txt.charAt(i) * h)) + txt.charAt(i + M)) % q;
                 if (t < 0) t = t + q;
@@ -84,8 +88,8 @@ public class RabinKarp {
         String pat = "bat";
         System.out.print("All index numbers where pattern found: ");
         System.out.println();
-        //   RBSearch(pat, txt, pat.length(), txt.length());
-        RbSearch(pat, txt, pat.length(), txt.length());
+        RBSearch(pat, txt, pat.length(), txt.length());
+         RbSearch(pat, txt, pat.length(), txt.length());
     }
 }
 
