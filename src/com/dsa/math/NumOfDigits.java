@@ -1,4 +1,4 @@
-package com.dsa.math.program;
+package com.dsa.math;
 
 import static java.lang.Math.floor;
 import static java.lang.Math.log10;

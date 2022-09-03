@@ -1,4 +1,4 @@
-package com.dsa.math.program;
+package com.dsa.math;
 
 public class CheckIsPrime {
     public static void main(String[] args) {

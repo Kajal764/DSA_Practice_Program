@@ -1,4 +1,4 @@
-package com.dsa.math.program;
+package com.dsa.math;
 //        a(n)=a(1)+(n-1)d
 //        a(n)=the nᵗʰ term in the sequence
 //        a(1)=the first term in the sequence

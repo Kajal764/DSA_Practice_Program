@@ -1,4 +1,4 @@
-package com.dsa.math.program;
+package com.dsa.math;
 
 // Tn = a1 * r(n-1)
 public class GeometricProgression {

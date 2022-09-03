@@ -1,4 +1,4 @@
-package com.dsa.math.program;
+package com.dsa.math;
 
 // Time complexity - Theta(d) - where d is num of digit from input no
 public class Palindrome {
