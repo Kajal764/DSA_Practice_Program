@@ -75,6 +75,10 @@ public class FirstOccurence {
             } else if (x > arr[mid]) {
                 low = mid + 1;
             } else {
+                // if we get the element we have three condtions
+                // 1. to check if the element is first or not we have to compare it's previous elements ,if its not same then we can say it's first occurence for that-> (arr[mid] != arr[mid - 1])
+                // 2. also while checking the if the first ocuurence is on first index then we can not check previous element for that (mid==0) 
+                // 3. if we get the element but it's not first occrenerces then will skip that element and make - ( high = mid - 1)
                 if (mid == 0 || (arr[mid] != arr[mid - 1])) {
                     return mid;
                 } else {
